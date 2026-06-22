@@ -25,7 +25,7 @@ Landing Page de alta conversão desenvolvida sob medida para a **Academia Zero 1
 
 
 ```bash
-git clone [https://github.com/seu-usuario/academia-zero13.git](https://github.com/AndreyCadmo/academia-zero13.git)
+git clone https://github.com/seu-usuario/academia-zero13.git
 ```
 
 2. Entre na pasta do projeto:
