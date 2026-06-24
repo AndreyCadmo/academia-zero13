@@ -21,7 +21,7 @@ export function Location() {
 
                 <div className="mb-12 w-full h-[350px] md:h-[450px] rounded-2xl overflow-hidden border border-neutral-900 shadow-2xl relative">
                     <iframe
-                        src={`https://www.google.com/maps/embed?pb=${encodeURIComponent(academiaInfo.endereço + ', ' + academiaInfo.cidade)}`}
+                        src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4519.937089791573!2d-46.793457524670494!3d-23.537436978816174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceffa5f37f6d3d%3A0xc56688fe4dcdfba3!2sR.%20Cam%C3%A9lia%2C%2026%20-%20Jardim%20das%20Flores%2C%20Osasco%20-%20SP%2C%2006110-300!5e1!3m2!1spt-BR!2sbr!4v1782339727005!5m2!1spt-BR!2sbr`}
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
