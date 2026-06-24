@@ -1,5 +1,6 @@
 // src/components/Location.tsx
 import React from 'react'
+import { academiaInfo } from '../config/Fitness'
 
 export function Location() {
     return (
@@ -11,16 +12,16 @@ export function Location() {
                         NOSSA <span className="text-amber-400">LOCALIZAÇÃO</span>
                     </h2>
                     <p className="text-neutral-300 font-bold text-lg">
-                        Av. Governador Mário Covas Júnior, 4732
+                        {academiaInfo.endereço}
                     </p>
                     <p className="text-neutral-400 text-sm font-medium mt-1 uppercase tracking-wider">
-                        Jardim Regina - Itanhaém / SP
+                        {academiaInfo.cidade}
                     </p>
                 </div>
 
                 <div className="mb-12 w-full h-[350px] md:h-[450px] rounded-2xl overflow-hidden border border-neutral-900 shadow-2xl relative">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3637.3824317135965!2d-46.8183145!3d-24.1758552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce2b0200000001%3A0x7ce08d5b88825c95!2sAv.%20Gov.%20M%C3%A1rio%20Covas%20J%C3%BAnior%2C%204732%20-%20Jardim%20Regina%2C%20Itanha%C3%A9m%20-%20SP%2C%2011740-000!5e0!3m2!1spt-BR!2sbr!4v1718560000000!5m2!1spt-BR!2sbr"
+                        src={`https://www.google.com/maps/embed?pb=${encodeURIComponent(academiaInfo.endereço + ', ' + academiaInfo.cidade)}`}
                         width="100%"
                         height="100%"
                         style={{ border: 0 }}
@@ -33,7 +34,7 @@ export function Location() {
 
                 <div className="mb-16">
                     <a
-                        href="https://maps.google.com/?q=Av.+Governador+Mário+Covas+Júnior,+4732+-+Jardim+Regina,+Itanhaém+-+SP"
+                        href={`https://maps.google.com/?q=${encodeURIComponent(academiaInfo.endereço + ', ' + academiaInfo.cidade)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 px-6 py-3 border border-neutral-800 hover:border-amber-400/40 bg-black text-neutral-300 hover:text-white rounded-xl transition-all font-bold uppercase text-xs tracking-wider"
@@ -46,7 +47,7 @@ export function Location() {
 
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-neutral-500 text-xs font-bold uppercase tracking-widest">
                     <div>
-                        © {new Date().getFullYear()} ACADEMIA ZERO 13 FIT. TODOS OS DIREITOS RESERVADOS.
+                        © {new Date().getFullYear()} {academiaInfo.nome}. TODOS OS DIREITOS RESERVADOS.
                     </div>
                     <div className="text-neutral-600">
                         Desenvolvido por <span className="text-neutral-400 font-black"><a href="https://andreycadmo.dev.br" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 ml-2">

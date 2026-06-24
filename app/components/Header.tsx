@@ -2,6 +2,7 @@
 "use client";
 
 import { useState } from "react";
+import { academiaInfo } from "../config/Fitness";
 
 export function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +32,7 @@ export function Header() {
                     rel="noopener noreferrer"
                     className="px-6 py-3 text-sm font-bold text-black bg-amber-400 hover:bg-amber-300 rounded-xl transition-all duration-200 uppercase tracking-wide shadow-md shadow-amber-500/10"
                 >
-                    Falar com o Matheus
+                    Falar com o {academiaInfo.personal}
                 </a>
             </div>
 
@@ -59,7 +60,7 @@ export function Header() {
                         rel="noopener noreferrer"
                         className="mt-3 w-full py-4 text-center text-sm font-bold text-black bg-amber-400 rounded-xl uppercase tracking-wide"
                     >
-                        Falar com o Matheus
+                        Falar com o {academiaInfo.personal}
                     </a>
                 </div>
             )}

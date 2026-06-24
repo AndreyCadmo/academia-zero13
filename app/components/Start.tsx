@@ -1,5 +1,6 @@
 // src/components/Hero.tsx
 import React from 'react'
+import { academiaInfo } from '../config/Fitness'
 
 export function Start() {
     return (
@@ -28,7 +29,7 @@ export function Start() {
             <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
 
                 <span className="inline-block px-4 py-1.5 text-xs font-bold tracking-wider text-amber-400 bg-black/70 backdrop-blur-sm border border-amber-400/30 rounded-full uppercase mb-8 shadow-md">
-                    A melhor estrutura de Itanhaém - DDD 13
+                    A melhor estrutura de {academiaInfo.localizacao}
                 </span>
 
                 <h1 className="text-4xl md:text-7xl font-black tracking-tight text-white uppercase mb-8 leading-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)]">
@@ -39,11 +40,11 @@ export function Start() {
                 </h1>
 
                 <p className="text-base md:text-xl text-neutral-200 max-w-2xl mx-auto mb-12 font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] bg-black/10 p-2 rounded-xl backdrop-blur-[1px]">
-                    Musculação raiz, ambiente focado e a estrutura essencial que você precisa para evoluir de verdade na Av. Governador Mário Covas.
+                    Musculação raiz, ambiente focado e a estrutura essencial que você precisa para evoluir de verdade na {academiaInfo.nome}. Treine com segurança, conforto e resultados.
                 </p>
 
                 <a
-                    href="https://wa.me/5513996951496?text=Fala%20Matheus!%20Vim%20pelo%20site%20e%20quero%20conhecer%20os%20planos%20da%20Academia%20Zero%2013."
+                    href={`https://wa.me/${academiaInfo.whatsapp}?text=Fala%20${academiaInfo.personal}!%20Vim%20pelo%20site%20e%20quero%20conhecer%20os%20planos%20da%20${academiaInfo.nome}.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-10 py-5 text-base md:text-lg font-black text-black bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 rounded-2xl transition-all duration-200 transform hover:scale-[1.03] shadow-xl shadow-amber-500/20 uppercase tracking-wider"

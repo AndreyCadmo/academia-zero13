@@ -1,48 +1,8 @@
 // src/components/Structure.tsx
 import React from 'react'
+import { plans, academiaInfo } from '../config/Fitness'
 
 export function Plans() {
-    const plans = [
-        {
-            name: "Plano Individual",
-            price: "85",
-            period: "/mês",
-            details: "Treino individual dinâmico",
-            highlight: false,
-            features: [
-                "Acesso livre à musculação",
-                "Até 6 treinos por semana",
-                "Estrutura completa e equipada",
-                "Foco total na sua evolução"
-            ]
-        },
-        {
-            name: "Plano Casal",
-            price: "160",
-            period: "/mês",
-            details: "Valor total para 2 pessoas",
-            highlight: true,
-            features: [
-                "Acesso livre para o casal",
-                "Até 6 treinos por semana para cada",
-                "Equivale a R$ 80,00 por pessoa",
-                "Treinar junto gera mais consistência"
-            ]
-        },
-        {
-            name: "Plano Amigo / Família",
-            price: "75",
-            period: "/mês",
-            details: "A partir de R$ 75,00 por pessoa",
-            highlight: false,
-            features: [
-                "Plano Amigo (2 pessoas): R$ 80,00 cada",
-                "Plano Família (3+ pessoas): R$ 75,00 cada",
-                "Até 6 treinos por semana por integrante",
-                "Chame a galera e economize direto"
-            ]
-        }
-    ];
 
     return (
         <section id="planos" className="py-24 bg-black px-4 md:px-8 border-b border-neutral-900">
@@ -55,19 +15,18 @@ export function Plans() {
                             <span className="text-amber-400">HORÁRIOS</span>
                         </h2>
                         <p className="text-neutral-400 font-medium max-w-md mx-auto md:mx-0">
-                            Escolha o formato ideal para o seu bolso e chame seus parceiros de treino para a Zero 13.
+                            Escolha o formato ideal para o seu bolso e chame seus parceiros de treino para a {academiaInfo.nome}.
                         </p>
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-end w-full">
                         <div className="bg-neutral-950 p-4 rounded-xl border border-neutral-900 text-center sm:text-left min-w-[220px]">
                             <span className="block font-bold text-neutral-400 uppercase text-xs mb-1">Segunda a Sexta</span>
-                            <span className="text-amber-400 font-black text-base block">07:00 às 12:00</span>
-                            <span className="text-amber-400 font-black text-base block">14:00 às 22:00</span>
+                            <span className="text-amber-400 font-black text-base block">07:00 às 22:00</span>
                         </div>
                         <div className="bg-neutral-950 p-4 rounded-xl border border-neutral-900 text-center sm:text-left min-w-[220px] flex flex-col justify-center">
                             <span className="block font-bold text-neutral-400 uppercase text-xs mb-1">Sábado</span>
-                            <span className="text-amber-400 font-black text-lg">09:00 às 13:00</span>
+                            <span className="text-amber-400 font-black text-lg">08:00 às 15:00</span>
                         </div>
                     </div>
                 </div>
@@ -124,7 +83,7 @@ export function Plans() {
                 <div className="text-center">
                     <p className="text-xs text-neutral-500 font-medium">
                         * Os valores acima correspondem ao acesso livre à estrutura da academia.
-                        Para serviços adicionais como <span className="text-amber-400/80 font-bold">Treino Personalizado e Criação de Rotina</span> com o Personal Matheus Menezes, consulte a disponibilidade diretamente no WhatsApp.
+                        Para serviços adicionais como <span className="text-amber-400/80 font-bold">Treino Personalizado e Criação de Rotina</span> com o Personal {academiaInfo.personal}, consulte a disponibilidade diretamente no WhatsApp.
                     </p>
                 </div>
 

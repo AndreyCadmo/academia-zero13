@@ -1,31 +1,15 @@
 // src/components/Benefits.tsx
 import React from 'react'
+import { items } from '../config/Fitness'
+import { academiaInfo } from '../config/Fitness'
 
 export function Benefits() {
-    const items = [
-        {
-            title: "Musculação Raiz",
-            desc: "Equipamentos essenciais, pesados e focados em quem quer treinar de verdade, sem firula visual ou distração.",
-            icon: "💪"
-        },
-        {
-            title: "Treino Personalizado",
-            desc: "A mensalidade garante o uso da estrutura. Para potencializar seus resultados, você pode contratar o acompanhamento exclusivo de Personal Trainer.",
-            icon: "📋"
-        },
-        {
-            title: "Vibe Hardcore",
-            desc: "Ambiente motivador com som no talo e ventiladores potentes. Aqui o foco é a consistência e a parceria de quem treina todo dia.",
-            icon: "⚡"
-        }
-    ];
-
     return (
         <section id="beneficios" className="relative min-h-screen flex flex-col justify-center bg-neutral-950 px-4 md:px-8 border-b border-neutral-900 py-16 md:py-0">
             <div className="max-w-6xl mx-auto w-full">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">
-                        POR QUE TREINAR NA <span className="text-amber-400">ZERO 13?</span>
+                        POR QUE TREINAR NA <span className="text-amber-400">{academiaInfo.nome}?</span>
                     </h2>
                     <p className="text-neutral-400 mt-4 max-w-xl mx-auto font-medium">
                         A estrutura ideal para o seu shape com a flexibilidade de montar sua rotina.
