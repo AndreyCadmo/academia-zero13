@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { academiaInfo } from "./config/Fitness";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Academia Zero 13",
-  description: "academia de musculação em Itanhaém, com treinos individuais, casal e amigo/família. Venha conhecer nossa estrutura e comece seu treino experimental hoje mesmo.",
+  title: "Treine Mais",
+  description: `academia de musculação em ${academiaInfo.localizacao}, com treinos individuais, casal e amigo/família. Venha conhecer nossa estrutura e comece seu treino experimental hoje mesmo.`,
 };
 
 export default function RootLayout({
@@ -24,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
         {children}
       </body>
     </html>
